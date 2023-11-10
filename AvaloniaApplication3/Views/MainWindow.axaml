@@ -6,26 +6,29 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaApplication3.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Width="400" Height="600"
+        Width="400" Height="450"
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaApplication3">
 
-    <Grid RowDefinitions="Auto,*,*,Auto,*" Margin="40 100">
-        <ComboBox Grid.Row="0">
-            <ComboBoxItem Content="Item 1" />
-            <ComboBoxItem Content="Item 2" />
-            <ComboBoxItem Content="Item 3" />
-            <ComboBoxItem Content="Item 4" />
-            <ComboBoxItem Content="Item 5" />
-        </ComboBox>
-    
-        <ComboBox Grid.Row="3">
-            <ComboBoxItem Content="Item 1" />
-            <ComboBoxItem Content="Item 2" />
-            <ComboBoxItem Content="Item 3" />
-            <ComboBoxItem Content="Item 4" />
-            <ComboBoxItem Content="Item 5" />
-        </ComboBox>
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" Margin="50">
+        <Grid.Styles>
+            <Style Selector="TextBlock">
+                <Setter Property="FontFamily" Value="Liberation Mono" />
+                <Setter Property="FontStretch" Value="Normal" />
+                <Setter Property="FontWeight" Value="Regular" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="Background" Value="Red" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+            </Style>
+        </Grid.Styles>
+
+        <TextBlock Text="1234567890" />
+        <TextBlock Grid.Row="1" Text="АБВГДЕЁЖЗИ" />
+        <TextBlock Grid.Row="2" Text="абвгдеёжзи" />
+        <TextBlock Grid.Row="3" Text="1234567890" />
+        <TextBlock Grid.Row="4" Text="ABCDEFGHIJ" />
+        <TextBlock Grid.Row="5" Text="abcdefghij" />
+        <TextBlock Grid.Row="6" Text="          " />
     </Grid>
 
 </Window>
